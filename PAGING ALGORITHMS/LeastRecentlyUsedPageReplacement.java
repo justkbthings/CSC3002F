@@ -30,14 +30,14 @@ public class LeastRecentlyUsedPageReplacement {
 
                 if(emptyFrame == -1){
                     int ind = 0;
-                    for(int i = 0; i < lastUsed.size();i++){
+                    for(int i = 0; i < lastUsed.length;i++){
                         if(lastUsed[i] < lastUsed[ind]){
                             emptyFrame = 0;
                         }
                     }
                 }
                 frames.put(emptyFrame, page);
-                lastUsed[emptyFrame] = time
+                lastUsed[emptyFrame] = time;
                 System.out.println(page + ": " + frames.toString());
             }
         }
